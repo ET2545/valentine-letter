@@ -55,6 +55,32 @@ body {
   border-bottom-right-radius: 6px;
 }
 
+.pocket {
+  position: relative; /* add this */
+}
+
+/* Peonies stamp shown on the envelope front */
+.pocket::after {
+  content: "";
+  position: absolute;
+  right: -115px;   /* controls left/right position */
+  bottom: -75px;   /* controls up/down position */
+  width: 62px;
+  height: 62px;
+
+  background-image: url("pinkpeonies.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  transform: rotate(10deg);
+  opacity: 0.95;
+
+  pointer-events: none;
+  z-index: 999;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.18));
+}
+
 /* Peonies STAMP (outside of envelope) */
 .stamp {
   position: absolute;
@@ -200,4 +226,5 @@ body {
   opacity: 0.85;
   box-shadow: 0 0 12px rgba(255, 77, 136, 0.6);
   bo
+
 
