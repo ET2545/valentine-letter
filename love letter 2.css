@@ -56,15 +56,6 @@
   font-family: "Dancing Script", cursive;
 }
 
-.letter:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
 .words {
   position: absolute;
   left: 10%;
@@ -317,6 +308,7 @@ body {
   background-color: #d9534f;
   color: #fff;
 }
+
 
 
 
