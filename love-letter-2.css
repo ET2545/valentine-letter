@@ -34,7 +34,7 @@ body {
   position: absolute;
   width: 0;
   height: 0;
-  z-index: 3;
+  z-index: 5;
 }
 
 .flap {
@@ -59,15 +59,15 @@ body {
 .stamp {
   position: absolute;
   right: 18px;
-  bottom: 16px;
-  width: 62px;
-  height: auto;
+  bottom: 18px;
+  width: 60px;
   transform: rotate(10deg);
   opacity: 0.95;
-  z-index: 6;
   pointer-events: none;
-  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.18));
+
+  z-index: 20; /* <-- IMPORTANT */
 }
+
 
 /* Letter */
 .letter {
@@ -200,3 +200,4 @@ body {
   opacity: 0.85;
   box-shadow: 0 0 12px rgba(255, 77, 136, 0.6);
   bo
+
