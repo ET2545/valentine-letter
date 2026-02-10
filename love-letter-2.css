@@ -1,3 +1,16 @@
+/* Page background */
+body {
+  background-color: #f0e6f6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Wrapper */
+.envlope-wrapper {
+  height: 380px;
+}
+
+/* Envelope base */
 #envelope {
   position: relative;
   width: 280px;
@@ -7,15 +20,16 @@
   margin-left: auto;
   margin-right: auto;
   top: 150px;
-  background-color: #d9534f; /* Warm romantic red */
+  background-color: #d9534f;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
 }
 
 #envelope:hover {
   transform: translateY(-3px);
-  transition: transform 0.2s ease;
 }
 
+/* Envelope front triangles */
 .front {
   position: absolute;
   width: 0;
@@ -27,25 +41,37 @@
   border-left: 140px solid transparent;
   border-right: 140px solid transparent;
   border-bottom: 82px solid transparent;
-  /* a little smaller */
-  border-top: 98px solid #d9534f; /* Same romantic red */
-  /* a little larger */
+  border-top: 98px solid #d9534f;
   transform-origin: top;
   pointer-events: none;
 }
 
 .pocket {
-  border-left: 140px solid #f5a3a2; /* Soft pinkish red for the pocket */
+  border-left: 140px solid #f5a3a2;
   border-right: 140px solid #f5a3a2;
-  border-bottom: 90px solid #ff6f61; /* Lighter romantic red */
+  border-bottom: 90px solid #ff6f61;
   border-top: 90px solid transparent;
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
 }
 
+/* Peonies STAMP (outside of envelope) */
+.stamp {
+  position: absolute;
+  right: 18px;
+  bottom: 16px;
+  width: 62px;
+  height: auto;
+  transform: rotate(10deg);
+  opacity: 0.95;
+  z-index: 6;
+  pointer-events: none;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.18));
+}
+
+/* Letter */
 .letter {
   position: relative;
-  z-index: 2;
   background-color: #fff;
   width: 90%;
   margin-left: auto;
@@ -55,28 +81,30 @@
   border-radius: 6px;
   box-shadow: 0 2px 26px rgba(0, 0, 0, 0.12);
   font-family: "Dancing Script", cursive;
+  z-index: 2;
 }
 
+/* Text blocks */
 .words {
   position: absolute;
-  z-index: 1; 
   left: 10%;
   width: 80%;
   height: 14%;
-  background-color: transparent; /* Light romantic tone */
+  background-color: #ffe6e6;
+  z-index: 1;
 }
 
+/* To line */
 .words.line1 {
   top: 8%;
-  width: 25%;
+  width: 35%;
   height: auto;
-  font-size: 0.7rem;
-  background-color: #ffe6e6;
+  font-size: 0.75rem;
 }
 
+/* Secret message (appears on open) */
 .words.secret {
   top: 18%;
-  width: 80%;
   text-align: center;
   font-size: 1.05rem;
   background: transparent;
@@ -91,42 +119,26 @@
   transform: translateY(0);
 }
 
+/* Main lines */
 .words.line2 {
   top: 32%;
   text-align: center;
   font-size: 1.1rem;
-  background-color: #ffe6e6;
 }
 
 .words.line3 {
   top: 48%;
   text-align: center;
   font-size: 1.1rem;
-  background-color: #ffe6e6;
 }
 
 .words.line4 {
   top: 64%;
   text-align: center;
   font-size: 1.1rem;
-  background-color: #ffe6e6;
 }
 
-.letter {
-  overflow: visible;
-}
-
-.peonies {
-  position: absolute;
-  top: 22%;
-  right: 10%;
-  width: 55px;
-  opacity: 0.95;
-  pointer-events: none;
-  transform: rotate(8deg);
-  z-index: 999;
-}
-
+/* Signature */
 .words.line5 {
   top: 80%;
   text-align: center;
@@ -135,6 +147,7 @@
   font-style: italic;
 }
 
+/* Open/close animations */
 .open .flap {
   transform: rotateX(180deg);
   transition: transform 0.4s ease, z-index 0.6s;
@@ -159,6 +172,7 @@
   z-index: 2;
 }
 
+/* Hearts */
 .hearts {
   position: absolute;
   top: 90px;
@@ -185,136 +199,4 @@
   background: linear-gradient(135deg, #ff4d88, #ff85b3);
   opacity: 0.85;
   box-shadow: 0 0 12px rgba(255, 77, 136, 0.6);
-  border-radius: 50px 50px 0 0;
-  transform: rotate(-45deg);
-  transform-origin: 0 100%;
-  pointer-events: none;
-}
-
-.heart:after {
-  left: 0;
-  transform: rotate(45deg);
-  transform-origin: 100% 100%;
-}
-
-.close .heart {
-  opacity: 0;
-  -webkit-animation: none;
-  animation: none;
-}
-
-.a1 {
-  left: 20%;
-  transform: scale(0.6);
-  opacity: 1;
-  -webkit-animation: slideUp 4s linear 1, sideSway 2s ease-in-out 4 alternate;
-  -moz-animation: slideUp 4s linear 1, sideSway 2s ease-in-out 4 alternate;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-delay: 0.7s;
-  animation-delay: 0.7s;
-}
-
-.a2 {
-  left: 55%;
-  transform: scale(1);
-  opacity: 1;
-  -webkit-animation: slideUp 5s linear 1, sideSway 4s ease-in-out 2 alternate;
-  -moz-animation: slideUp 5s linear 1, sideSway 4s ease-in-out 2 alternate;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-delay: 0.7s;
-  animation-delay: 0.7s;
-}
-
-.a3 {
-  left: 10%;
-  transform: scale(0.8);
-  opacity: 1;
-  -webkit-animation: slideUp 7s linear 1, sideSway 2s ease-in-out 6 alternate;
-  -moz-animation: slideUp 7s linear 1, sideSway 2s ease-in-out 6 alternate;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-animation-delay: 0.7s;
-  animation-delay: 0.7s;
-}
-
-@-webkit-keyframes slideUp {
-  0% {
-    top: 0;
-  }
-  100% {
-    top: -600px;
-  }
-}
-@keyframes slideUp {
-  0% {
-    top: 0;
-  }
-  100% {
-    top: -600px;
-  }
-}
-@-webkit-keyframes sideSway {
-  0% {
-    margin-left: 0px;
-  }
-  100% {
-    margin-left: 50px;
-  }
-}
-@keyframes sideSway {
-  0% {
-    margin-left: 0px;
-  }
-  100% {
-    margin-left: 50px;
-  }
-}
-body {
-  background-color: #f0e6f6; /* Soft lavender for a romantic, dreamy feel */
-}
-
-.envlope-wrapper {
-  height: 380px;
-}
-
-.reset {
-  text-align: center;
-}
-
-.reset button {
-  font-weight: 800;
-  font-style: normal;
-  transition: all 0.1s linear;
-  -webkit-appearance: none;
-  background-color: transparent;
-  border: solid 2px #d9534f;
-  border-radius: 4px;
-  color: #d9534f;
-  display: inline-block;
-  font-size: 14px;
-  text-transform: uppercase;
-  margin: 5px;
-  padding: 10px;
-  line-height: 1em;
-  text-decoration: none;
-  min-width: 120px;
-  cursor: pointer;
-}
-
-.reset button:hover {
-  background-color: #d9534f;
-  color: #fff;
-}
-
-
-
-
-
-
-
-
-
-
-
+  bo
