@@ -117,13 +117,17 @@
 
 .peonies {
   position: absolute;
-  bottom: 6%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90px;
-  opacity: 1;
-  z-index: 3;
+  top: 22%;
+  right: 10%;
+  width: 55px;
+  opacity: 0.95;
+  pointer-events: none;
+  transform: rotate(8deg);
+  z-index: 10;
 }
+
+.peonies { opacity: 0; transition: opacity 0.4s ease 1s; }
+.open .peonies { opacity: 0.95; }
 
 .words.line5 {
   top: 80%;
@@ -305,5 +309,6 @@ body {
   background-color: #d9534f;
   color: #fff;
 }
+
 
 
