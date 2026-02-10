@@ -45,6 +45,7 @@
 
 .letter {
   position: relative;
+  z-index: 2;
   background-color: #fff;
   width: 90%;
   margin-left: auto;
@@ -308,6 +309,7 @@ body {
   background-color: #d9534f;
   color: #fff;
 }
+
 
 
 
