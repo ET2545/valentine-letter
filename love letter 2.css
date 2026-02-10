@@ -120,9 +120,9 @@
   bottom: 6%;
   left: 50%;
   transform: translateX(-50%);
-  width: 80px;
-  opacity: 0.85;
-  pointer-events: none;
+  width: 90px;
+  opacity: 1;
+  z-index: 3;
 }
 
 .words.line5 {
@@ -305,4 +305,5 @@ body {
   background-color: #d9534f;
   color: #fff;
 }
+
 
