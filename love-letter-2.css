@@ -140,6 +140,14 @@ body {
   transition: opacity 0.4s ease 0.7s, transform 0.4s ease 0.7s;
 }
 
+.inline-peonies {
+  width: 26px;
+  height: auto;
+  vertical-align: middle;
+  margin-left: 6px;
+  transform: translateY(-2px);
+}
+
 .open .words.secret {
   opacity: 1;
   transform: translateY(0);
@@ -226,5 +234,6 @@ body {
   opacity: 0.85;
   box-shadow: 0 0 12px rgba(255, 77, 136, 0.6);
   bo
+
 
 
