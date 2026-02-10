@@ -115,6 +115,16 @@
   font-size: 1.1rem;
 }
 
+.peonies {
+  position: absolute;
+  bottom: 6%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
 .words.line5 {
   top: 80%;
   text-align: center;
@@ -295,3 +305,4 @@ body {
   background-color: #d9534f;
   color: #fff;
 }
+
