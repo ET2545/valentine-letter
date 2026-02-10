@@ -59,6 +59,7 @@
 
 .words {
   position: absolute;
+  z-index: 1; 
   left: 10%;
   width: 80%;
   height: 14%;
@@ -110,13 +111,6 @@
 .letter {
   overflow: visible;
 }
-
-.peonies {
-  display: block;
-  border: 2px solid red;   /* TEMP debug border */
-  background: yellow;      /* TEMP debug background */
-}
-
 
 .peonies {
   position: absolute;
@@ -309,6 +303,7 @@ body {
   background-color: #d9534f;
   color: #fff;
 }
+
 
 
 
