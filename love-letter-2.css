@@ -71,6 +71,7 @@
   width: 25%;
   height: auto;
   font-size: 0.7rem;
+  background-color: #ffe6e6;
 }
 
 .words.secret {
@@ -94,18 +95,21 @@
   top: 32%;
   text-align: center;
   font-size: 1.1rem;
+  background-color: #ffe6e6;
 }
 
 .words.line3 {
   top: 48%;
   text-align: center;
   font-size: 1.1rem;
+  background-color: #ffe6e6;
 }
 
 .words.line4 {
   top: 64%;
   text-align: center;
   font-size: 1.1rem;
+  background-color: #ffe6e6;
 }
 
 .letter {
@@ -303,6 +307,7 @@ body {
   background-color: #d9534f;
   color: #fff;
 }
+
 
 
 
