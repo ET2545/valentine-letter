@@ -63,7 +63,7 @@
   left: 10%;
   width: 80%;
   height: 14%;
-  background-color: #ffe6e6; /* Light romantic tone */
+  background-color: transparent; /* Light romantic tone */
 }
 
 .words.line1 {
@@ -303,6 +303,7 @@ body {
   background-color: #d9534f;
   color: #fff;
 }
+
 
 
 
