@@ -20,9 +20,9 @@
   position: absolute;
 
   /* position on top-right of the envelope */
-  top: 235px;   /* adjust a little if needed */
   left: 50%;
-  transform: translateX(86px) rotate(-12deg);
+  top: 150px;   /* adjust a little if needed */
+  transform: translateX(85px) translateY(55px) rotate(-12deg);
 
   width: 58px;
   height: 58px;
@@ -33,8 +33,9 @@
   border: 3px solid rgba(255, 255, 255, 0.9);
   opacity: 0.92;
   filter: saturate(1.05) contrast(1.05);
-  z-index: 999;
+  z-index: 10;
   pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.35s ease;
 }
 
 /* Stamp edge */
@@ -290,6 +291,7 @@ body {
   background-color: #d9534f;
   color: #fff;
 }
+
 
 
 
