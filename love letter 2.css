@@ -63,32 +63,30 @@
   transition: opacity 0.15s ease, transform 0.35s ease;
 }
 
-.recipient-name{
+.recipient-name {
   position: absolute;
 
-  /* anchor to the envelope */
+  /* anchor to center of wrapper */
   left: 50%;
-  top: 150px;                 /* same as #envelope top */
+  top: 150px; /* aligns with envelope's top */
 
-  /* top-center placement */
-  transform: translateX(-50%) translateY(18px);
+  /* move slightly down from top edge */
+  transform: translateX(-50%) translateY(12px);
 
   font-family: "Dancing Script", cursive;
   font-size: 1.05rem;
   color: #8b2c2c;
 
   background: rgba(255, 255, 255, 0.55);
-  padding: 6px 12px;
+  padding: 6px 14px;
   border-radius: 6px;
 
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  z-index: 11;
+  z-index: 20;
+
   pointer-events: none;
-
-  opacity: 1;
-  transition: opacity 0.25s ease, transform 0.35s ease;
+  transition: opacity 0.25s ease, transform 0.3s ease;
 }
-
 
 .front {
   position: absolute;
@@ -323,6 +321,7 @@ body {
   background-color: #d9534f;
   color: #fff;
 }
+
 
 
 
