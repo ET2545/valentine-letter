@@ -18,8 +18,12 @@
 
 .stamp {
   position: absolute;
-  top: 70px;
-  right: 18px;
+
+  /* position on top-right of the envelope */
+  top: 215px;   /* adjust a little if needed */
+  left: 50%;
+  transform: translateX(86px) rotate(-12deg);
+
   width: 58px;
   height: 58px;
   background-image: url("pinkpeonies.jpg");
@@ -27,18 +31,13 @@
   background-position: center;
   border-radius: 10px;
   border: 3px solid rgba(255, 255, 255, 0.9);
-  box-shadow: none;
   opacity: 0.92;
   filter: saturate(1.05) contrast(1.05);
-  transform: rotate(-12deg);
-  transform-origin: top center;
-  z-index: 10; /* force on top */
+  z-index: 999;
   pointer-events: none;
-  transition: opacity 0.2s ease, transform 0.35s ease;
 }
 
-
-/* Perforated stamp edge + subtle paper texture */
+/* Stamp edge */
 .stamp::before {
   content: "";
   position: absolute;
@@ -56,16 +55,11 @@
   background: rgba(255, 255, 255, 0.06);
 }
 
-.open .stamp {
+/* Hide when open */
+.open + .stamp {
   opacity: 0;
-  transform: rotate(-12deg) rotateX(85deg) translateY(-10px);
-}
-
-.close .stamp {
-  opacity: 0.92;
-  transform: rotate(-12deg) rotateX(0deg);
-  transform-origin: top center;
-  transition: opacity 0.25s ease, transform 0.35s ease;
+  transform: translateX(86px) rotate(-12deg) rotateX(85deg);
+  transition: opacity 0.15s ease, transform 0.35s ease;
 }
 
 .front {
@@ -265,6 +259,7 @@ body {
 
 .envlope-wrapper {
   height: 380px;
+  position: relative;
 }
 
 .reset {
@@ -288,6 +283,7 @@ body {
   background-color: #d9534f;
   color: #fff;
 }
+
 
 
 
