@@ -20,16 +20,18 @@
   position: absolute;
   top: 18px;
   right: 18px;
-  width: 64px;
-  height: 64px;
+  width: 58px;
+  height: 58px;
   background-image: url("pinkpeonies.jpg");
   background-size: cover;
   background-position: center;
   border-radius: 10px;
   border: 3px solid rgba(255, 255, 255, 0.9);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
-  transform: rotate(-10deg);
-  z-index: 999; /* force on top */
+  box-shadow: none;
+  opacity: 0.92;
+  filter: saturate(1.05) contrast(1.05);
+  transform: rotate(-12deg);
+  z-index: 5; /* force on top */
   pointer-events: none;
 }
 
@@ -56,7 +58,7 @@
   position: absolute;
   width: 0;
   height: 0;
-  z-index: 3;
+  z-index: 6;
 }
 
 .flap {
@@ -66,6 +68,7 @@
   border-top: 98px solid #d9534f;
   transform-origin: top;
   pointer-events: none;
+  z-index: 7;
 }
 
 .pocket {
@@ -88,6 +91,7 @@
   border-radius: 6px;
   box-shadow: 0 2px 26px rgba(0, 0, 0, 0.12);
   font-family: "Dancing Script", cursive;
+  z-index: 3;
 }
 
 .words {
@@ -156,19 +160,19 @@
 .close .flap {
   transform: rotateX(0deg);
   transition: transform 0.4s 0.6s ease, z-index 1s;
-  z-index: 5;
+  z-index: 7;
 }
 
 .close .letter {
   transform: translateY(0px);
   transition: transform 0.4s ease, z-index 1s;
-  z-index: 1;
+  z-index: 3;
 }
 
 .open .letter {
   transform: translateY(-100px);
   transition: transform 0.4s 0.6s ease, z-index 0.6s;
-  z-index: 2;
+  z-index: 4;
 }
 
 .hearts {
@@ -270,6 +274,7 @@ body {
   background-color: #d9534f;
   color: #fff;
 }
+
 
 
 
