@@ -63,15 +63,15 @@
   transition: opacity 0.15s ease, transform 0.35s ease;
 }
 
-.recipient-name {
+.recipient-name{
   position: absolute;
 
-  /* anchor to envelope */
+  /* anchor to the envelope */
   left: 50%;
-  top: 150px;
+  top: 150px;                 /* same as #envelope top */
 
-  /* center-ish on the front */
-  transform: translateX(-60px) translateY(85px);
+  /* top-center placement */
+  transform: translateX(-50%) translateY(18px);
 
   font-family: "Dancing Script", cursive;
   font-size: 1.05rem;
@@ -82,11 +82,13 @@
   border-radius: 6px;
 
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  z-index: 9;
+  z-index: 11;
   pointer-events: none;
 
+  opacity: 1;
   transition: opacity 0.25s ease, transform 0.35s ease;
 }
+
 
 .front {
   position: absolute;
@@ -295,9 +297,9 @@ body {
               transform 0.35s ease 0.1s;
 }
 
-.envlope-wrapper.open .recipient-name {
+.envlope-wrapper.open .recipient-name{
   opacity: 0;
-  transform: translateX(-60px) translateY(75px) rotateX(85deg);
+  transform: translateX(-50%) translateY(8px);
 }
 
 .reset {
@@ -321,6 +323,7 @@ body {
   background-color: #d9534f;
   color: #fff;
 }
+
 
 
 
