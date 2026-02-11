@@ -158,4 +158,80 @@
   top: 0;
   width: 50px;
   height: 80px;
-  backgr
+  background: linear-gradient(135deg, #ff4d88, #ff85b3);
+  opacity: 0.85;
+  box-shadow: 0 0 12px rgba(255, 77, 136, 0.6);
+  border-radius: 50px 50px 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+.heart:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+.close .heart {
+  opacity: 0;
+  animation: none;
+}
+
+.a1 {
+  left: 20%;
+  transform: scale(0.6);
+  animation: slideUp 4s linear 1, sideSway 2s ease-in-out 4 alternate;
+}
+
+.a2 {
+  left: 55%;
+  transform: scale(1);
+  animation: slideUp 5s linear 1, sideSway 4s ease-in-out 2 alternate;
+}
+
+.a3 {
+  left: 10%;
+  transform: scale(0.8);
+  animation: slideUp 7s linear 1, sideSway 2s ease-in-out 6 alternate;
+}
+
+@keyframes slideUp {
+  0% { top: 0; }
+  100% { top: -600px; }
+}
+
+@keyframes sideSway {
+  0% { margin-left: 0px; }
+  100% { margin-left: 50px; }
+}
+
+body {
+  background-color: #f0e6f6;
+}
+
+.envlope-wrapper {
+  height: 380px;
+}
+
+.reset {
+  text-align: center;
+}
+
+.reset button {
+  font-weight: 800;
+  background-color: transparent;
+  border: solid 2px #d9534f;
+  border-radius: 4px;
+  color: #d9534f;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.reset button:hover {
+  background-color: #d9534f;
+  color: #fff;
+}
+
