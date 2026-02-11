@@ -20,7 +20,7 @@
   position: absolute;
 
   /* position on top-right of the envelope */
-  top: 215px;   /* adjust a little if needed */
+  top: 235px;   /* adjust a little if needed */
   left: 50%;
   transform: translateX(86px) rotate(-12deg);
 
@@ -262,6 +262,13 @@ body {
   position: relative;
 }
 
+.envlope-wrapper.open .stamp {
+  opacity: 0;
+  transform: translateX(86px) rotate(-12deg) rotateX(85deg);
+  transition: opacity 0.15s ease 0.1s,
+              transform 0.35s ease 0.1s;
+}
+
 .reset {
   text-align: center;
 }
@@ -283,6 +290,7 @@ body {
   background-color: #d9534f;
   color: #fff;
 }
+
 
 
 
