@@ -22,7 +22,7 @@
   /* position on top-right of the envelope */
   left: 50%;
   top: 150px;   /* adjust a little if needed */
-  transform: translateX(85px) translateY(55px) rotate(-12deg);
+  transform: translateX(64px) translateY(70px) rotate(-12deg);
 
   width: 58px;
   height: 58px;
@@ -265,7 +265,7 @@ body {
 
 .envlope-wrapper.open .stamp {
   opacity: 0;
-  transform: translateX(86px) rotate(-12deg) rotateX(85deg);
+  transform: translateX(64px) translateY(70px) rotate(-12deg) rotateX(85deg);
   transition: opacity 0.15s ease 0.1s,
               transform 0.35s ease 0.1s;
 }
@@ -291,6 +291,7 @@ body {
   background-color: #d9534f;
   color: #fff;
 }
+
 
 
 
