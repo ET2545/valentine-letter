@@ -16,6 +16,43 @@
   transform: translateY(-3px);
 }
 
+.stamp {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 64px;
+  height: 64px;
+
+  background-image: url("pinkpeonies.jpg");
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 10px;
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+
+  transform: rotate(-10deg);
+  z-index: 4; /* above pocket */
+}
+
+/* Perforated stamp edge + subtle paper texture */
+.stamp::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 12px;
+  border: 2px dashed rgba(255, 255, 255, 0.9);
+  opacity: 0.9;
+}
+
+.stamp::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
 .front {
   position: absolute;
   width: 0;
@@ -234,4 +271,5 @@ body {
   background-color: #d9534f;
   color: #fff;
 }
+
 
