@@ -63,14 +63,11 @@
   transition: opacity 0.15s ease, transform 0.35s ease;
 }
 
+/* Recipient base */
 .recipient-name {
   position: absolute;
-
-  /* anchor to center of wrapper */
   left: 50%;
-  top: 150px; /* aligns with envelope's top */
-
-  /* move slightly down from top edge */
+  top: 150px;
   transform: translateX(-50%) translateY(12px);
 
   font-family: "Dancing Script", cursive;
@@ -80,14 +77,32 @@
   background: rgba(255, 255, 255, 0.55);
   padding: 6px 14px;
   border-radius: 6px;
-
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  z-index: 12;
+
+  z-index: 50;            /* safely above envelope */
+  pointer-events: none;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, transform 0.3s ease, visibility 0s linear 0.2s;
+}
+
+/* ✅ Show when envelope is CLOSED */
+#envelope.close ~ .recipient-name {
   opacity: 1;
   visibility: visible;
-  pointer-events: none;
-  transition: opacity 0.25s ease, transform 0.3s ease;
+  transform: translateX(-50%) translateY(12px);
+  transition: opacity 0.2s ease, transform 0.3s ease;
 }
+
+/* ✅ Hide when envelope is OPEN */
+#envelope.open ~ .recipient-name {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%) translateY(0px);
+  transition: opacity 0.1s ease, transform 0.2s ease, visibility 0s linear 0.1s;
+}
+
 
 .front {
   position: absolute;
@@ -296,13 +311,6 @@ body {
               transform 0.35s ease 0.1s;
 }
 
-.envlope-wrapper.open .recipient-name{
-  opacity: 0;
-  transform: translateX(-50%) translateY(0px);
-  visibility: hidden;
-  transition: opacity 0.1s ease, visibility 0s linear 0.1s;
-}
-
 .envlope-wrapper:not(.open) .recipient-name {
   opacity: 1;
   visibility: visible;
@@ -330,6 +338,7 @@ body {
   background-color: #d9534f;
   color: #fff;
 }
+
 
 
 
