@@ -1,5 +1,6 @@
 #envelope {
   position: relative;
+  isolation: isolate;
   width: 280px;
   height: 180px;
   border-bottom-left-radius: 6px;
@@ -274,6 +275,7 @@ body {
   background-color: #d9534f;
   color: #fff;
 }
+
 
 
 
