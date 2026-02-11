@@ -1,6 +1,5 @@
 #envelope {
   position: relative;
-  isolation: isolate;
   width: 280px;
   height: 180px;
   border-bottom-left-radius: 6px;
@@ -53,6 +52,20 @@
   inset: 0;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.06);
+}
+
+.close .stamp {
+  opacity: 0.92;
+  transform: rotate(-12deg) rotateX(0deg);
+  transform-origin: top center;
+  transition: opacity 0.25s ease, transform 0.35s ease;
+}
+
+.open .stamp {
+  opacity: 0;
+  transform: rotate(-12deg) rotateX(85deg);
+  transform-origin: top center;
+  transition: opacity 0.15s ease, transform 0.35s ease;
 }
 
 .front {
@@ -275,6 +288,7 @@ body {
   background-color: #d9534f;
   color: #fff;
 }
+
 
 
 
