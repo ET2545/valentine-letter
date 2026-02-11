@@ -83,7 +83,8 @@
 
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   z-index: 4;
-
+  opacity: 1;
+  visibility: visible;
   pointer-events: none;
   transition: opacity 0.25s ease, transform 0.3s ease;
 }
@@ -298,7 +299,8 @@ body {
 .envlope-wrapper.open .recipient-name{
   opacity: 0;
   transform: translateX(-50%) translateY(0px);
-  transition: opacity 0.1s ease;
+  visibility: hidden;
+  transition: opacity 0.1s ease, visibility 0s linear 0.1s;
 }
 
 .reset {
@@ -322,6 +324,7 @@ body {
   background-color: #d9534f;
   color: #fff;
 }
+
 
 
 
