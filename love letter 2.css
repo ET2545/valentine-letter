@@ -82,7 +82,7 @@
   border-radius: 6px;
 
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  z-index: 4;
+  z-index: 12;
   opacity: 1;
   visibility: visible;
   pointer-events: none;
@@ -303,6 +303,12 @@ body {
   transition: opacity 0.1s ease, visibility 0s linear 0.1s;
 }
 
+.envlope-wrapper:not(.open) .recipient-name {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(12px);
+}
+
 .reset {
   text-align: center;
 }
@@ -324,6 +330,7 @@ body {
   background-color: #d9534f;
   color: #fff;
 }
+
 
 
 
