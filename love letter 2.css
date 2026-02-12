@@ -153,59 +153,45 @@
   border-radius: 4px;
   background-color: #ffe6e6;
   white-space: normal;
-  overflow: hidden;
-  line-height: 1.25;
+  overflow: visible;
+  line-height: 1.3;
+
+  font-family: "Dancing Script", cursive;
 }
 
 .words.line1 {
-  top: 8%;
-  width: 25%;
-  height: auto;
-  font-size: 0.7rem;
-}
-
-.words.secret {
-  top: 18%;
-  width: 80%;
-  text-align: center;
-  font-size: 1.05rem;
+  top: 10%;
+  width: auto;
+  font-size: 0.75rem;
   background: transparent;
-  opacity: 0;
-  transform: translateY(6px);
-  transition: opacity 0.4s ease 0.7s, transform 0.4s ease 0.7s;
-}
-
-.open .words.secret {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .words.line2 {
-  top: 30%;
+  top: 28%;
   text-align: center;
   font-size: 1.05rem;
 }
 
 .words.line3 {
-  top: 44%;
+  top: 42%;
   text-align: center;
   font-size: 1.05rem;
 }
 
 .words.line4 {
-  top: 58%;
+  top: 56%;
   text-align: center;
   font-size: 1.05rem;
 }
 
 .words.line6 {
-  top: 72%;
+  top: 70%;
   text-align: center;
   font-size: 1.05rem;
 }
 
 .words.line5 {
-  top: 86%;
+  top: 80%;
   text-align: center;
   font-size: 0.95rem;
   background: transparent;
