@@ -149,18 +149,19 @@
   left: 10%;
   width: 80%;
 
-  box-sizing: border-box;     /* ✅ keeps padding inside the 80% */
+  box-sizing: border-box;
   padding: 6px 10px;
-
-  background-color: #ffe6e6;
   border-radius: 4px;
 
-  white-space: normal;        /* ✅ allow wrapping */
-  overflow: visible;          /* ✅ stop cutting */
+  background-color: #ffe6e6;
+
+  white-space: normal;
+  overflow: visible;
+
+  overflow-wrap: anywhere;
   line-height: 1.25;
-  overflow-wrap: anywhere; /* ✅ breaks long text nicely */
-  word-break: normal;
 }
+
 
 .words.line1 {
   top: 10%;
@@ -338,6 +339,7 @@ body {
   background-color: #d9534f;
   color: #fff;
 }
+
 
 
 
