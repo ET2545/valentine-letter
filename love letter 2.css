@@ -155,44 +155,49 @@
 
   background-color: #ffe6e6;
 
-  white-space: normal;
+  white-space: nowrap;
   overflow: visible;
 
-  overflow-wrap: anywhere;
-  line-height: 1.3;
-  min-height: 44px;
+  line-height: 1.2;
 }
 
 
 .words.line1 {
   top: 10%;
   width: auto;
-  font-size: 0.75rem;
   background: transparent;
+  padding: 0;
+  left: 10%;
+  text-align: left;
+  font-size: 0.75rem;
 }
 
 .words.line2 {
   top: 26%;
   text-align: center;
   font-size: 0.98rem;
+  font-size: clamp(0.78rem, 3.2vw, 1rem);
 }
 
 .words.line3 {
   top: 41%;
   text-align: center;
   font-size: 0.98rem;
+  font-size: clamp(0.78rem, 3.2vw, 1rem);
 }
 
 .words.line4 {
   top: 56%;
   text-align: center;
   font-size: 0.98rem;
+  font-size: clamp(0.78rem, 3.2vw, 1rem);
 }
 
 .words.line6 {
   top: 71%;
   text-align: center;
   font-size: 0.98rem;
+  font-size: clamp(0.78rem, 3.2vw, 1rem);
 }
 
 .words.line5 {
@@ -340,6 +345,7 @@ body {
   background-color: #d9534f;
   color: #fff;
 }
+
 
 
 
