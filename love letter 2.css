@@ -150,6 +150,8 @@
   width: 80%;
   height: 14%;
   background-color: #ffe6e6;
+  white-space: normal;
+  overflow: hidden;
 }
 
 .words.line1 {
@@ -193,8 +195,14 @@
   font-size: 1.1rem;
 }
 
+.words.line6 {
+  top: 72%;
+  text-align: center;
+  font-size: 1.05rem;
+}
+
 .words.line5 {
-  top: 80%;
+  top: 86%;
   text-align: center;
   font-size: 0.95rem;
   background: transparent;
@@ -338,6 +346,7 @@ body {
   background-color: #d9534f;
   color: #fff;
 }
+
 
 
 
